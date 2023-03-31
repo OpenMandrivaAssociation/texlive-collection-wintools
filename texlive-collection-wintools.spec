@@ -1,6 +1,6 @@
 Name:		texlive-collection-wintools
 Version:	54074
-Release:	1
+Release:	2
 Summary:	Windows-only support programs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/collection-wintools
