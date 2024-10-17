@@ -3,7 +3,7 @@ Version:	54074
 Release:	2
 Summary:	Windows-only support programs
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/collection-wintools
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/collection-wintools
 License:	
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collection-wintools.r%{version}.tar.xz
 BuildArch:	noarch
