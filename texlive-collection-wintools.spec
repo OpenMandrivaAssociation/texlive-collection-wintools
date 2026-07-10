@@ -1,33 +1,23 @@
-Name:		texlive-collection-wintools
-Version:	54074
-Release:	2
+%global tl_name collection-wintools
+%global tl_revision 65952
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	Windows-only support programs
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/collection-wintools
-License:	
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collection-wintools.r%{version}.tar.xz
+URL:		https://www.ctan.org/pkg/collection-wintools
+License:	LPPL
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/collection-wintools.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Requires:	texlive(dviout.windows)
+Requires:	texlive(wintools.windows)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Utilities for Windows, since they are not readily available
-there: chktex, unzip, wget, xpdf, and the dviout previewer.
+Utilities for Windows, since they are not readily available there:
+chktex, unzip, wget, xpdf, and the dviout previewer.
 
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
