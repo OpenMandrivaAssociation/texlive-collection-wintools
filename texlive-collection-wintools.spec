@@ -11,8 +11,6 @@ License:	LPPL
 Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/collection-wintools.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-BuildRequires:	texlive-tlpkg
-%texlive_base_requires
 Requires:	texlive(dviout.windows)
 Requires:	texlive(wintools.windows)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
